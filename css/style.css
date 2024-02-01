@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.loader {
+  transform: rotateX(70deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader .element {
+  display: block;
+  border-left: 5px solid rgb(35, 199, 231);
+  border-right: 5px solid rgb(35, 199, 231);
+  border-top: 5px solid rgb(29, 146, 170);
+  width: 100px;
+  height: 10px;
+  margin-top: 5px;
+  perspective: 1000px;
+  animation: rotate 5s infinite linear;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateY(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
